@@ -21,10 +21,10 @@ jobs:
         env:
           CI: true
       - name: build project
-        if: gtihub.event_name == 'push'
+        if: github.event_name == 'push'
         run: npm run build
       - name: deploy to staging
-        if: gtihub.event_name == 'push'
+        if: github.event_name == 'push'
         run: npx surge --project ./build --domain snobbish-secretaryyuvalberber.surge.sh 
         env:
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
