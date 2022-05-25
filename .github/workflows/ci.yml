@@ -62,7 +62,7 @@ jobs:
         run: npx surge --project ./build --domain ambitious-goldfishyuvyuvyuv.surge.sh 
       - name: upload coverage reports
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: npx codecov
+        run: npx codecov 
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }} 
       
