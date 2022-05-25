@@ -1,4 +1,4 @@
-module.export = {
+module.exports = {
     branches: "main",
     repositoryUrl: "https://github.com/yuvber/github-actions-react-app",
     plugins: [
