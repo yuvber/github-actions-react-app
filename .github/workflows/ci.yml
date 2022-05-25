@@ -65,4 +65,6 @@ jobs:
         run: npx codecov 
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }} 
+      - name: open issue
+        if: faliure() && 
       
